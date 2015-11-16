@@ -1,7 +1,6 @@
 from django.db import models
 
 class Mascota(models.Model):
-	
 	nombre = models.CharField(max_length=25)
 	raza = models.CharField(max_length=25)
 	color = models.CharField(max_length=15)
@@ -10,12 +9,11 @@ class Mascota(models.Model):
 	foto = models.CharField(max_length=70)
 	estado = models.BooleanField()
 	recompensa = models.IntegerField()
-	usuario = models.ForeingKey("Usuario")
-	
-	def __unicode__(self):
-		return ("%s %s"%(self.nombre, self.usuario))
-		
+	Usuario = models.ForeignKey("Usuario")
 
+	def __unicode__(self):
+		return ("%s %s"%(self.nombre, self.Usuario))
+		
 class Usuario(models.Model):
 	nombre = models.CharField(max_length=25)
 	correo = models.CharField(max_length=30)

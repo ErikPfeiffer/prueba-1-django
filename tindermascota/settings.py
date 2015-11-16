@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'mascota',
     'tindermascota',
+
 )
 
 MIDDLEWARE_CLASSES = (
