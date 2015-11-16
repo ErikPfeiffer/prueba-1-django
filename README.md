@@ -4,8 +4,8 @@ Prueba 1 Django
 
 2- Clases Mascota y Usuario
 
-3- Ok
+3- ProyectoListView(ListView):
 
-4- Ok
+4- ProyectoCreateView(CreateView):
 
 %
