@@ -12,8 +12,8 @@ class Mascota(models.Model):
 	Usuario = models.ForeignKey("Usuario")
 
 	def __unicode__(self):
-		return ("%s %s"%(self.nombre, self.Usuario))
-		
+		return ("%s"%(self.nombre))
+
 class Usuario(models.Model):
 	nombre = models.CharField(max_length=25)
 	correo = models.CharField(max_length=30)
@@ -21,7 +21,7 @@ class Usuario(models.Model):
 
 	def __unicode__(self):
 		return("%s %s"%(self.nombre, self.correo))
-		
+
 
 
 
