@@ -37,7 +37,7 @@
 		<type label="SET" length="1" sql="SET" quote=""/>
 		<type label="Bit" length="0" sql="bit" quote=""/>
 	</group>
-</datatypes><table x="50" y="358" name="caza_recompensa">
+</datatypes><table x="38" y="275" name="caza_recompensa">
 <row name="id_caza_recompensa" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -54,7 +54,7 @@
 <part>id_caza_recompensa</part>
 </key>
 </table>
-<table x="681" y="381" name="mascota">
+<table x="726" y="323" name="mascota">
 <row name="id_mascota" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -90,7 +90,7 @@
 <part>id_mascota</part>
 </key>
 </table>
-<table x="899" y="371" name="usuario">
+<table x="988" y="306" name="usuario">
 <row name="id_usuario" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -107,7 +107,7 @@
 <part>id_usuario</part>
 </key>
 </table>
-<table x="380" y="446" name="mascota_perdida">
+<table x="409" y="294" name="mascota_perdida">
 <row name="id_mascota_perdida" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -123,7 +123,7 @@
 <part>id_mascota_perdida</part>
 </key>
 </table>
-<table x="365" y="244" name="info_mascota_perdida">
+<table x="727" y="172" name="info_mascota_perdida">
 <row name="id_mascota_perdida" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -136,10 +136,25 @@
 <default>NULL</default></row>
 <row name="id_caza_recompensa" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
-<default>NULL</default><relation table="caza_recompensa" row="id_caza_recompensa" />
-</row>
+<default>NULL</default></row>
 <key type="PRIMARY" name="">
 <part>id_mascota_perdida</part>
+</key>
+</table>
+<table x="323" y="126" name="caza_recompensa_info_mascota_perdida">
+<row name="id_caza_recompensa_info_mascota_perdida" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="id_caza_recompensa" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="caza_recompensa" row="id_caza_recompensa" />
+</row>
+<row name="id_mascota_perdida" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="info_mascota_perdida" row="id_mascota_perdida" />
+</row>
+<key type="PRIMARY" name="">
+<part>id_caza_recompensa_info_mascota_perdida</part>
 </key>
 </table>
 </sql>
